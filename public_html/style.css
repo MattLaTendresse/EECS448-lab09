@@ -1,0 +1,19 @@
+body {
+    font-family: "Georgia";
+    background-color: rgb(234, 238, 255);
+    color: #000000;
+  }
+  
+  div.navbar {
+    background-color: #dbdbdb;
+  }
+  
+  a {
+    position: relative;
+    color: #565656;
+    left:500px;
+  }
+  
+  a:hover {
+    background-color: #bfbfbf;
+  }

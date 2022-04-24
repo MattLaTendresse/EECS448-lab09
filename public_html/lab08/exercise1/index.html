@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html> 
+    <head> 
+        <link rel="stylesheet" href="exc1style.css"type="text/css"/> 
+        <title>Exercise 1: Password Validator </title> 
+    </head> 
+ 
+    <body> 
+        <div class ="font-style">
+        <h1>Please enter your password!</h1>
+        <p>Enter both passwords then press the button to see if they are the same, password must be 8 characters long!</p>
+        <form>
+            <label for="Password1">Password:</label><br>
+            <input  type="text" id="Password1" name="Password1" placeholder="Password"><br>
+            <label for="Password2">Retype Password:</label><br>
+            <input  type="text" id="Password2" name="Password2"placeholder="Password">
+        </form>
+       <button onclick="validatePassword()">Validate</button>
+    </div>
+       <script>
+           function validatePassword(){
+               let password1 = document.getElementById('Password1').value;
+               let password2 = document.getElementById('Password2').value;
+                if(password1.length < 8){
+                    alert("Length is not 8 characters long!");
+                }
+                if(password1 === password2){
+                    alert("Passwords match!");
+                }
+                if(password1 !== password2){
+                    alert("Passwords do not match!");
+                }
+           }
+       </script>
+    </body> 
+</html> 

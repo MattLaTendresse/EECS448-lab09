@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Exercise 4: CSS Manipulation </title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="exc4style.css">
+    </head>
+    <body>
+        <h1>Exercise 4: CSS Manipulation  </h1>
+        <div id="paragraphManipulation">
+            <form>
+                <label>Border:</label><br>
+                <input  type="text" id="border-red" placeholder="0-255"><br>
+                <input  type="text" id="border-green" placeholder="0-255"><br>
+                <input  type="text" id="border-blue"  placeholder="0-255"><br>
+                <input  type="text" id="width" placeholder="width"><br>
+
+                <label>Background:</label><br>
+                <input  type="text" id="Background-red" placeholder="0-255"><br>
+                <input  type="text" id="Background-green" placeholder="0-255"><br>
+                <input  type="text" id="Background-blue"  placeholder="0-255"><br>
+            </form>
+            <button onclick="changeValues()">Change!</button>
+            <p>cited from <a href="https://www.lipsum.com/feed/html">here</a></p>
+            <p id = "text-box" class="text-box">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. In id nisl a orci iaculis ultricies. Etiam molestie, nibh vel rhoncus mattis, diam metus euismod massa, tincidunt auctor sapien lacus nec neque. Sed lacinia quam pulvinar, aliquet mi et, aliquet ex. In sodales nisl sit amet ante elementum, id bibendum magna sollicitudin. Nullam volutpat est sapien, in mattis purus accumsan quis. Phasellus viverra massa nec magna sollicitudin volutpat. Quisque ac lorem iaculis, pretium mauris et, pharetra quam. Donec sed ornare justo. Suspendisse sodales, enim at mattis auctor, metus urna laoreet purus, a sollicitudin leo lacus non mauris.
+            </p>
+        </div>
+        <script>
+            
+      function changeValues() {
+
+        // Get new values
+        const newBorderRed = document.getElementById('border-red').value;
+        const newBorderBlue = document.getElementById('border-green').value;
+        const newBorderGreen = document.getElementById('border-blue').value;
+        const newBorderWidth = document.getElementById('width').value;
+
+        const newBackgroundRed = document.getElementById('Background-red').value;
+        const newBackgroundGreen = document.getElementById('Background-green').value;
+        const newBackgroundBlue = document.getElementById('Background-blue').value;
+
+        // Get paragraph
+        var paragraph = document.getElementById("text-box");
+
+        // make rgb strings
+        var backgroundString = "rgb("
+          + String(newBackgroundRed) + ", "
+          + String(newBackgroundGreen) + ", "
+          + String(newBackgroundBlue) + ")";
+
+        var bordercolorString = "rgb("
+          + String(newBorderRed) + ", "
+          + String(newBorderGreen) + ", "
+          + String(newBorderBlue) + ")";
+
+        console.log(backgroundString);
+
+        // Change attributes
+        paragraph.style.backgroundColor = backgroundString;
+        paragraph.style.borderColor = bordercolorString;
+
+        var temp = String(newBorderWidth) + "px";
+        paragraph.style.borderWidth = temp;
+      }
+    </script>
+    </body>
+</html>

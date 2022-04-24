@@ -1,0 +1,62 @@
+.slideshow-container {
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  position: relative;
+  margin: auto;
+  padding: 10px;
+
+}
+body{
+  background-color: rgb(234, 238, 255);
+}
+
+.mySlides {
+    display: flex;
+    justify-content: center;
+  }
+
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+/* CSS */
+.button-24 {
+  background:  rgb(248, 248, 248);
+  border: 1px solid  rgb(151, 156, 177);
+  border-radius: 6px;
+  box-shadow: rgba(0, 0, 0, 0.1) 1px 2px 4px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  min-height: 40px;
+  outline: 0;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  width: 200px;
+}
+
+.button-24:hover,
+.button-24:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #000000;
+}
+
+.button-24:active {
+  opacity: .5;
+}
